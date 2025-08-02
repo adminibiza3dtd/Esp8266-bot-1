@@ -6,3 +6,4 @@ Opcionalmente podemos cambiar el mensaje en los aparatados de las linias de coma
 Será el mensaje que nos muestre nuestro bot de telegram cuando le mandemos la orden:    /on   -   /off   .
 Para cualquier duda dejo mi correo electrónico: ibiza3d.js.td@gmail.com .
 Saludos.
+
