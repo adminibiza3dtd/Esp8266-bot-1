@@ -3,11 +3,11 @@
 #include <UniversalTelegramBot.h>
 
 // TU RED WiFi
-const char* ssid = "MiFibra-2F53";
-const char* password = "drHutnav";
+const char* ssid = "Nombre_de_tu_wifi";
+const char* password = "Password_wifi";
 
 // BOT TOKEN (ya insertado el tuyo)
-const char* botToken = "8497602303:AAFJHHXv6WMJu4Q2GFGpcLlq5RfM5SksJIs";
+const char* botToken = "Dirección_Apy_Tokken_bot_telegram";
 
 WiFiClientSecure client;
 UniversalTelegramBot bot(botToken, client);
@@ -62,12 +62,12 @@ void handleNewMessages(int numNewMessages) {
     if (text == "/off") {
       currentLedMode = LED_OFF;       // Cambia el modo a apagado
       digitalWrite(ledPin, HIGH);     // Asegura que el LED esté APAGADO (activo-bajo)
-      bot.sendMessage(chat_id, "🌑 OFF SWITCH NO REC CAM4", "");
+      bot.sendMessage(chat_id, "🌑 OFF SWITCH NO REC CAM4", "");       // Podemos cambiar la variable "OFF SWITCH NO REC CAM4" Ese mensaje te lo muestra el bot
     } else if (text == "/on") {
       currentLedMode = LED_BLINKING;  // Cambia el modo a parpadeando
       digitalWrite(ledPin, LOW);      // Enciende el LED para empezar el primer ciclo (activo-bajo)
       lastBlinkToggleTime = millis(); // Resetea el tiempo para el parpadeo
-      bot.sendMessage(chat_id, "💡 ON SWITCH REC CAM4 (parpadeando)", "");
+      bot.sendMessage(chat_id, "💡 ON SWITCH REC CAM4 (parpadeando)", "");     // Lomismo que en el caso OFF Podemos cambiar la variable
     } else {
       bot.sendMessage(chat_id, "Comandos validos:\n/on\n/off", "");
     }
